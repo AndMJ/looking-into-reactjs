@@ -1,14 +1,16 @@
 # reactjs-learning
 reactjs using Vite
 
-Create new vite project
+> source: https://www.youtube.com/watch?v=Rh3tobg7hEo
+
+### Create new vite project
 ```
 npm create vite@latest
 cd "project_name"
 npm i
 ```
 
-To run:
+### To run:
 ```
 npm run dev
 ```
