@@ -16,6 +16,9 @@ function App() {
     function addItem(e){
         e.preventDefault()
 
+        /* the inline function, () => {}, with param "currentList", that grabs the actual current list of todos,
+        *  returns an array to "setTodoList", with what was previously in the t0do list, plus the added value
+        * */
         setTodoList( (currentList) => {
             return [
                 ...currentList, new item(InputValue, false)
@@ -69,7 +72,7 @@ function App() {
                                 <input type={"checkbox"} checked={item.completed} onChange={event => toggleItemCheckbox(item.id, event.target.checked)}/>
                                 {item.description}
                             </label>
-                            <button className={"btn btn-danger"} onClick={() => deleteItem(item.id)}>Delete</button>
+                            <button className={"btn btn-danger"} onClick={ () => deleteItem(item.id)}>Delete</button>
                         </li>
                     )
                 })}
